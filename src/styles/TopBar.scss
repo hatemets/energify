@@ -3,8 +3,9 @@
 
 #nav {
     position: fixed;
+    border: 1px solid white;
     height: $navbarHeight !important;
-    min-height: 70px;
+    height: 70px;
     overflow: hidden;
     top: 0;
     background-color: $darker;
