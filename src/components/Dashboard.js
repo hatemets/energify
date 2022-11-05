@@ -1,3 +1,5 @@
+import { LightGrey } from "../constants"
+
 const boxStyle = {
     position: "relative",
     background: "#232328",
@@ -44,18 +46,18 @@ const boxStyle3 = {
 export const Dashboard = () => (
     <div style={{position: "absolute", top: 89.3}}>
         <div className="heading" style={{height: "auto", width: "100vw", textAlign: "center", marginBottom: 20,}}>
-            <p style={{fontSize: 90, margin: "0", padding: "0", color: "#1BB565",  fontWeight: "bolder"}}>67%<i style={{fontSize: 20, color: "white", fontWeight: "lighter"}}>/kWh</i></p>
-            <p style={{textDecoration: "underline", margin: "0", padding: "0", color: "white", textDecorationColor: "#1BB565",}}>compared to last month</p>
+            <p style={{fontSize: 90, margin: "0", padding: "0", color: "#1BB565",  fontWeight: "bolder"}}>67%<i style={{fontSize: 20, color: LightGrey, fontWeight: "lighter"}}>/kWh</i></p>
+            <p style={{textDecoration: "underline", margin: "0", padding: "0", color: LightGrey, textDecorationColor: "#1BB565",}}>compared to last month</p>
         </div>
 
         <div className="tiles" style={{}}>
             <div style={{...boxStyle, float: "left", marginLeft: 14,}}>
                 <p style={{color: "#1BB565", fontSize: "2.4rem", margin: 0, padding: 0,}}>81%</p>
-                <p style={{color: "white", fontSize: "0.8rem", margin: 0, padding: 0, position: "absolute", bottom: 15}}>avg, Daily / Historic</p>
+                <p style={{color: LightGrey, fontSize: "0.8rem", margin: 0, padding: 0, position: "absolute", bottom: 15}}>avg, Daily / Historic</p>
             </div>
             <div style={{...boxStyle, float: "right", marginRight: 14,}}>
-                <p style={{color: "white", fontSize: "2.4rem", margin: 0, padding: 0,}}>$117</p>
-                <p style={{color: "white", fontSize: "0.8rem", margin: 0, padding: 0, position: "absolute", bottom: 15}}>$ saved since <b>October</b></p>
+                <p style={{color: LightGrey, fontSize: "2.4rem", margin: 0, padding: 0,}}>$117</p>
+                <p style={{color: LightGrey, fontSize: "0.8rem", margin: 0, padding: 0, position: "absolute", bottom: 15}}>$ saved since <b>October</b></p>
             </div>
         </div>
 
@@ -78,12 +80,19 @@ export const Dashboard = () => (
                     </defs>
 
                 </svg>
-                <p style={{color: "#1BB565", fontSize: "2rem", margin: 0, padding: 0,}}>23</p>
-                <p style={{color: "white", fontSize: "0.8rem", margin: 0, padding: 0, position: "absolute", bottom: 15}}>Trees Saved</p>
+                <p style={{color: "#1BB565", fontWeight: "bold", fontSize: "2rem", margin: 0, padding: 0,}}>23</p>
+                <p style={{color: LightGrey, fontSize: "0.8rem", margin: 0, padding: 0, position: "absolute", bottom: 15}}>Trees Saved</p>
             </div>
             <div style={{...boxStyle, float: "right", marginRight: 14,}}>
-                <p style={{color: "white", fontSize: "2.4rem", margin: 0, padding: 0,}}>#5</p>
-                <p style={{color: "white", fontSize: "0.8rem", margin: 0, padding: 0, position: "absolute", bottom: 15}}>Leaderboard Position</p>
+                <div style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "center"
+                    }}>
+                    <span style={{marginTop: 30, fontSize: "1.5rem", marginRight: 5, fontWeight: "bold" }}>#</span><span style={{color: LightGrey, fontWeight: "bold", fontSize: "3.4rem", margin: 0, padding: 0,}}>5</span>
+                </div>
+                <p style={{color: LightGrey, fontSize: "0.8rem", margin: 0, padding: 0, position: "absolute", bottom: 15}}>Leaderboard Position</p>
             </div>
         </div>
 
@@ -91,11 +100,11 @@ export const Dashboard = () => (
             <div className="tiles-energy" style={{marginBottom: 25,}}>
                 <div style={{...boxStyle3, float: "left", marginLeft: 0,}}>
                     <p style={{color: "#1BB565", fontSize: "2.4rem", margin: 0, padding: 0,}}>81%</p>
-                    <p style={{color: "white", fontSize: "0.8rem", margin: 0, padding: 0, position: "absolute", bottom: 15}}>avg, Daily / Historic</p>
+                    <p style={{color: LightGrey, fontSize: "0.8rem", margin: 0, padding: 0, position: "absolute", bottom: 15}}>avg, Daily / Historic</p>
                 </div>
                 <div style={{...boxStyle3, float: "right", marginRight: 0,}}>
-                    <p style={{color: "white", fontSize: "2.4rem", margin: 0, padding: 0,}}>$117</p>
-                    <p style={{color: "white", fontSize: "0.8rem", margin: 0, padding: 0, position: "absolute", bottom: 15}}>$ saved since <b>October</b></p>
+                    <p style={{color: LightGrey, fontSize: "2.4rem", margin: 0, padding: 0,}}>$117</p>
+                    <p style={{color: LightGrey, fontSize: "0.8rem", margin: 0, padding: 0, position: "absolute", bottom: 15}}>$ saved since <b>October</b></p>
                 </div>
             </div>
         </div>
