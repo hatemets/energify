@@ -60,7 +60,7 @@ export const Leaderboard = () => {
                             display: "flex",
                             justifyContent: "space-between",
                             margin: "0.5rem 0"
-                            }}>
+                        }}>
                             <span style={{ color: `${targetPerson === p.name ? "orange" : "#dedede"}` }}>{i + 1} - {p.name}</span>
                             <span>{p.energySaved}% saved</span>
                         </div>)
@@ -68,41 +68,47 @@ export const Leaderboard = () => {
                 </ul>
             </div>
 
-            <div style={{
-                display: "flex",
-                justifyContent: "space-evenly",
-                marginTop: "1rem",
-            }}>
-                <div className="one" style={{
-                    ...boxStyle,
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-evenly"
-                    }}>
-                    <p style={{
-                        fontWeight: "bold",
-                        margin: 0
-                    }}>Optimization</p>
-                    <p style={{
-                        fontSize: 48,
-                        margin: 0,
-                        padding: 0,
-                        fontWeight: "bold"
-                    }}>4</p>
-                    <p style={{
-                        fontWeight: "bold",
-                        margin: 0
-                    }}>Unused appliances</p>
-                </div>
-                <div className="two" style={{
-                    ...boxStyle,
-                    background: GreenRegular,
-                    color: "white",
-                    fontSize: 24,
-                    fontWeight: "bold",
+            <div>
+                <h1 style={{
+                    margin: "2rem 1.5rem",
                     textAlign: "center"
+                }}>You can do even better:</h1>
+                <div style={{
+                    display: "flex",
+                    justifyContent: "space-evenly",
+                    marginTop: "1rem",
+                }}>
+                    <div className="one" style={{
+                        ...boxStyle,
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "space-evenly"
                     }}>
-                    OPTIMIZE NOW
+                        <p style={{
+                            fontWeight: "bold",
+                            margin: 0
+                        }}>Optimization</p>
+                        <p style={{
+                            fontSize: 48,
+                            margin: 0,
+                            padding: 0,
+                            fontWeight: "bold"
+                        }}>4</p>
+                        <p style={{
+                            fontWeight: "bold",
+                            margin: 0
+                        }}>Unused appliances</p>
+                    </div>
+                    <div className="two" style={{
+                        ...boxStyle,
+                        background: GreenRegular,
+                        color: "white",
+                        fontSize: 24,
+                        fontWeight: "bold",
+                        textAlign: "center"
+                    }}>
+                        OPTIMIZE NOW
+                    </div>
                 </div>
             </div>
         </div>
