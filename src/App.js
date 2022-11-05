@@ -3,11 +3,7 @@ import { TopBar } from "./components/TopBar"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import {Leaderboard} from "./components/Leaderboard"
 import {Devices} from "./components/Devices"
-// import Home from "./pages/Home"
-// import Projects from "./pages/Projects"
-// import Contact from "./pages/Contact"
-// import NotFound from "./pages/NotFound"
-// import Footer from "./components/Footer"
+import { Dashboard } from "./components/Dashboard"
 // import ScrollWrapper from "./components/ScrollWrapper"
 
 
@@ -18,7 +14,7 @@ const App = () => {
                 {/* <ScrollWrapper> */}
                     <TopBar />
                     <Routes>
-                        {/* <Route path="/" element={<Dashboard />} /> */}
+                        <Route path="/" element={<Dashboard />} />
                         {/* <Route path="/logistics" element={<Logistics />} /> */}
                         <Route path="/leaderboard" element={<Leaderboard />} />
                         <Route path="/devices" element={<Devices />} />
