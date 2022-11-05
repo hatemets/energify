@@ -11,7 +11,6 @@ export const Item = ({ name, isOn }) => {
             justifyContent: "space-between",
             alignItems: "center",
             width: "86%",
-            height: "2rem"
         }}>
             <div style={{
                 fontSize: 14
