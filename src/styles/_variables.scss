@@ -1,0 +1,41 @@
+/* Colors */
+$light: #dedede;
+$darker: #121212;
+$dark: #19191b;
+$semidark: #343438; 
+$grey: #888;
+$mainOrange: #f28e1c;
+
+/* Margins and paddings */
+$edgeBuffer: 1.5rem;
+$inputHorizontalPadding: 0.8rem;
+
+/* Borders */
+$borderRadius: 6px;
+
+/* Font sizes */
+$humongous: 4rem;
+$huge: 3rem;
+$extraLarge: 2.5rem;
+$largest: 2rem;
+$larger: 1.75rem;
+$large: 1.5rem;
+$semilarge: 1.37rem;
+$medium: 1.25rem;
+$regular: 1.1rem;
+
+/* Specific attributes */
+$navbarHeight: 11vh;
+$navbarHeightLarge: 13vh;
+
+/* Transitions and animations */
+$transitionTime: 200ms;
+
+/* Breakpoints */
+$breakpoints: (
+    "xs": 0,
+    "sm": 480px,
+    "md": 720px,
+    "lg": 960px,
+    "xl": 1200px
+);

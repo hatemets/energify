@@ -1,0 +1,87 @@
+@import "_variables.scss";
+// @import "mixins";
+
+#nav {
+    position: fixed;
+    height: $navbarHeight !important;
+    min-height: 70px;
+    overflow: hidden;
+    top: 0;
+    background-color: $darker;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+
+    // @include md {
+    //     height: $navbarHeightLarge !important;
+    // }
+
+    #logo-link {
+        margin-left: 4vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #logo {
+            display: flex;
+            align-items: center;
+
+            // @include lg {
+            //     transform: scale(1.3);
+            // }
+        }
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+
+        // @include md {
+        //     margin-right: 2rem;
+        // }
+
+        // @include lg {
+        //     margin-right: 4rem;
+        // }
+
+        a {
+            padding: 3rem 1.5rem;
+            font-size: $medium;
+            margin: 0 1vw;
+
+            &:hover {
+                color: $mainOrange;
+            }
+
+            // @include lg {
+            //     font-size: $semilarge;
+            // }
+        }
+    }
+
+    #menu-icon {
+        display: none;
+    }
+}
+
+
+/* Hamburger menu */
+@media screen and (max-width: 480px) {
+    #nav {
+        height: 12vh;
+        align-items: center;
+        padding: 0 0.5rem;
+
+        .links {
+            display: none;
+        }
+
+        #menu-icon {
+            display: initial;
+            margin-right: 5vw;
+            cursor: pointer;
+            z-index: 1;
+        }
+    }
+}
