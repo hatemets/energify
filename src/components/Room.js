@@ -1,14 +1,14 @@
-import {GreenDarker, GreenRegular} from "../constants"
+import {GreenDarker, DarkRegular, BoxShadow} from "../constants"
 import { Item } from "./Item"
 
 export const Room = ({ name, items }) => {
     return (
         <div style={{
             width: "47vw",
-            boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 12px",
+            boxShadow: BoxShadow,
             marginTop: "1rem",
             marginBottom: -8,
-            background: GreenRegular,
+            background: DarkRegular,
             borderBottomLeftRadius: 7,
             borderBottomRightRadius: 7,
             }}>
@@ -28,7 +28,7 @@ export const Room = ({ name, items }) => {
             </div>
 
             <ul style={{
-                background: GreenRegular,
+                background: DarkRegular,
                 padding: "1rem 0",
                 margin: 0,
                 borderBottomLeftRadius: 7,

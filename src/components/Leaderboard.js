@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react"
+import { DarkRegular, GreenDarker, GreenRegular, BoxShadow} from "../constants"
 
 const boxStyle = {
     width: "46vw",
     height: 180,
-    background: "navy",
-    borderRadius: 7
+    borderRadius: 7,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    boxShadow: BoxShadow,
 }
 
 export const Leaderboard = () => {
@@ -18,9 +22,6 @@ export const Leaderboard = () => {
     ])
 
     const targetPerson = "Jason"
-
-    // useEffect(() => {
-    // }, [position, people])
 
     return (
         <div id="leaderboard">
@@ -40,7 +41,7 @@ export const Leaderboard = () => {
                 width: "70vw",
                 height: "30vh",
                 borderRadius: 7,
-                boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 12px",
+                boxShadow: BoxShadow,
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
@@ -73,15 +74,35 @@ export const Leaderboard = () => {
                 marginTop: "1rem",
             }}>
                 <div className="one" style={{
-                    ...boxStyle
+                    ...boxStyle,
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-evenly"
                     }}>
-                    one
+                    <p style={{
+                        fontWeight: "bold",
+                        margin: 0
+                    }}>Optimization</p>
+                    <p style={{
+                        fontSize: 48,
+                        margin: 0,
+                        padding: 0,
+                        fontWeight: "bold"
+                    }}>4</p>
+                    <p style={{
+                        fontWeight: "bold",
+                        margin: 0
+                    }}>Unused appliances</p>
                 </div>
                 <div className="two" style={{
                     ...boxStyle,
-                    background: "darkorange"
+                    background: GreenRegular,
+                    color: "white",
+                    fontSize: 24,
+                    fontWeight: "bold",
+                    textAlign: "center"
                     }}>
-                    two
+                    OPTIMIZE NOW
                 </div>
             </div>
         </div>
