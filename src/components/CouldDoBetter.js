@@ -44,6 +44,7 @@ export const CouldDoBetter = () => (
             </div>
             <div className="two" style={{
                 ...boxStyle,
+                cursor: "pointer",
                 background: GreenRegular,
                 color: "white",
                 fontSize: 24,
