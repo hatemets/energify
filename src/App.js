@@ -1,10 +1,10 @@
 import React from "react"
 import { TopBar } from "./components/TopBar"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import {Leaderboard} from "./components/Leaderboard"
-import {Devices} from "./components/Devices"
+import { Leaderboard } from "./components/Leaderboard"
+import { Devices } from "./components/Devices"
 import { Dashboard } from "./components/Dashboard"
-// import ScrollWrapper from "./components/ScrollWrapper"
+import { Logistics } from "./components/Logistics"
 
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
                     <TopBar />
                     <Routes>
                         <Route path="/" element={<Dashboard />} />
-                        {/* <Route path="/logistics" element={<Logistics />} /> */}
+                        <Route path="/logistics" element={<Logistics />} />
                         <Route path="/leaderboard" element={<Leaderboard />} />
                         <Route path="/devices" element={<Devices />} />
                         {/* <Route path="*" element={<NotFound />} /> */}

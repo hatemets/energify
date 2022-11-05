@@ -2,6 +2,7 @@ import { useState } from "react"
 import { BoxShadow } from "../constants"
 import {CouldDoBetter} from "./CouldDoBetter"
 
+
 export const Leaderboard = () => {
     const [position, setPosition] = useState(5)
     const [people, setPeople] = useState([
@@ -47,7 +48,7 @@ export const Leaderboard = () => {
                 }}>Top 5</h5>
                 <ul style={{ width: "70%" }}>
                     {
-                        people.map((p, i) => <div style={{
+                        people.map((p, i) => <div key={i} style={{
                             display: "flex",
                             justifyContent: "space-between",
                             margin: "0.5rem 0"
