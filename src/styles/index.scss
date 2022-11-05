@@ -2,6 +2,7 @@
 @import "./_classes.scss";
 @import "./SideBar.scss";
 @import "./TopBar.scss";
+@import "./Leaderboard.scss";
 
 body {
     margin: 0;
@@ -11,6 +12,10 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    a {
+        text-decoration: none;
+    }
 }
 
 code {
@@ -18,9 +23,6 @@ code {
     monospace;
 }
 
-a {
-    text-decoration: none;
-}
 
 
 *, *:before, *:after {
