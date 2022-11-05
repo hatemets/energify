@@ -13,12 +13,12 @@ const monthlyEnergyComparisonData = [
 ]
 
 const monthlyExpensesComparisonData = [
-    {"Month": "Jun", "Expenses": monthlyEnergyComparisonData[0]["Energy Used"] * 0.221 },
-    {"Month": "Jul", "Expenses": monthlyEnergyComparisonData[1]["Energy Used"] * 0.213 },
-    {"Month": "Aug", "Expenses": monthlyEnergyComparisonData[2]["Energy Used"] * 0.217 },
-    {"Month": "Sep", "Expenses": monthlyEnergyComparisonData[3]["Energy Used"] * 0.234 },
-    {"Month": "Oct", "Expenses": monthlyEnergyComparisonData[4]["Energy Used"] * 0.258 },
-    {"Month": "Nov", "Expenses": monthlyEnergyComparisonData[5]["Energy Used"] * 0.251 },
+    {"Month": "Jun", "Expenses": monthlyEnergyComparisonData[0]["Energy Used"] * 0.721 },
+    {"Month": "Jul", "Expenses": monthlyEnergyComparisonData[1]["Energy Used"] * 0.813 },
+    {"Month": "Aug", "Expenses": monthlyEnergyComparisonData[2]["Energy Used"] * 0.917 },
+    {"Month": "Sep", "Expenses": monthlyEnergyComparisonData[3]["Energy Used"] * 0.834 },
+    {"Month": "Oct", "Expenses": monthlyEnergyComparisonData[4]["Energy Used"] * 0.958 },
+    {"Month": "Nov", "Expenses": monthlyEnergyComparisonData[5]["Energy Used"] * 0.851 },
 ]
 
 
@@ -87,7 +87,7 @@ export const Logistics = () => {
                     data={avgCostData}
                 >
                     <XAxis dataKey="Time" tick={{ fontSize: 10 }}/>
-                    <YAxis tick={{ fontSize: 12 }} unit="$"/>
+                    <YAxis tick={{ fontSize: 12 }} unit="€"/>
                     <ReferenceLine x={getFullHour()} stroke="white"/>
                     <Line type="monotone" dataKey="Expenses" stroke="green" strokeWidth="2" dot={false} />
                 </LineChart>
@@ -137,7 +137,7 @@ export const Logistics = () => {
                 </h3>
                 <BarChart width={330} height={300} data={monthlyExpensesComparisonData}>
                     <XAxis dataKey="Month" />
-                    <YAxis unit="$" />
+                    <YAxis unit="€" />
                     <Tooltip />
                     <Bar dataKey="Expenses" fill={GreenDarker} />
                 </BarChart>
