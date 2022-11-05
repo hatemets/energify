@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 // import Footer from "./components/Footer"
 // import ScrollWrapper from "./components/ScrollWrapper"
 
+
 const App = () => {
     return (
         <div id="App">
@@ -15,11 +16,11 @@ const App = () => {
                 {/* <ScrollWrapper> */}
                     <TopBar />
                     <Routes>
-                        <Route path="/" element={<Dashboard />} />
-                        <Route path="/logistics" element={<Logistics />} />
-                        <Route path="/leaderboard" element={<Leaderboard />} />
-                        <Route path="/devices" element={<Devices />} />
-                        <Route path="*" element={<NotFound />} />
+                        {/* <Route path="/" element={<Dashboard />} /> */}
+                        {/* <Route path="/logistics" element={<Logistics />} /> */}
+                        {/* <Route path="/leaderboard" element={<Leaderboard />} /> */}
+                        {/* <Route path="/devices" element={<Devices />} /> */}
+                        {/* <Route path="*" element={<NotFound />} /> */}
                     </Routes>
                     {/* <Footer /> */}
                 {/* </ScrollWrapper> */}
