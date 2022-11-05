@@ -1,5 +1,5 @@
 import { LineChart, BarChart, Line, XAxis, ReferenceLine, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts"
-import {BoxShadow} from "../constants"
+import {BoxShadow, NavbarHeight} from "../constants"
 import avgEnergyData from "../data/averageEnergyUsage.json"
 
 export const Logistics = () => {
@@ -8,7 +8,7 @@ export const Logistics = () => {
             width: "100vw",
             height: "100vh",
             position: "absolute",
-            top: 89.3167
+            top: NavbarHeight
         }}>
             <div style={{
                 boxShadow: BoxShadow,
