@@ -1,5 +1,12 @@
 import { useState, useEffect } from "react"
 
+const boxStyle = {
+    width: "46vw",
+    height: 180,
+    background: "navy",
+    borderRadius: 7
+}
+
 export const Leaderboard = () => {
     const [position, setPosition] = useState(5)
     const [people, setPeople] = useState([
@@ -60,6 +67,23 @@ export const Leaderboard = () => {
                 </ul>
             </div>
 
+            <div style={{
+                display: "flex",
+                justifyContent: "space-evenly",
+                marginTop: "1rem",
+            }}>
+                <div className="one" style={{
+                    ...boxStyle
+                    }}>
+                    one
+                </div>
+                <div className="two" style={{
+                    ...boxStyle,
+                    background: "darkorange"
+                    }}>
+                    two
+                </div>
+            </div>
         </div>
     )
 }

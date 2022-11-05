@@ -1,4 +1,4 @@
-import {Switch} from "@mui/material"
+import {GreenDarker, GreenRegular} from "../constants"
 import { Item } from "./Item"
 
 export const Room = ({ name, items }) => {
@@ -8,12 +8,12 @@ export const Room = ({ name, items }) => {
             boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 12px",
             marginTop: "1rem",
             marginBottom: -8,
-            background: "#26262b",
+            background: GreenRegular,
             borderBottomLeftRadius: 7,
             borderBottomRightRadius: 7,
             }}>
             <div style={{
-                background: "#004d25",
+                background: GreenDarker,
                 borderRadius: 7,
                 padding: "0.2rem 0"
                 }}>
@@ -28,7 +28,7 @@ export const Room = ({ name, items }) => {
             </div>
 
             <ul style={{
-                background: "#26262b",
+                background: GreenRegular,
                 padding: "1rem 0",
                 margin: 0,
                 borderBottomLeftRadius: 7,

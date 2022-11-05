@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom"
 
 export const SideBar = ({ isOpen, setOpen }) => {
+    const closeBar = () => document.querySelector(".hamburger-react").click()
+
     return (
         <>
             { isOpen && 
             <div id="sidebar">
                 <div className="container">
-                    <Link to="/">Dashboard</Link>
-                    <Link to="/logistics">Logistics</Link>
-                    <Link to="/leaderboard">Leaderboard</Link>
-                    <Link to="/devices">Devices</Link>
+                    <Link onClick={closeBar} to="/">Dashboard</Link>
+                    <Link onClick={closeBar} to="/logistics">Logistics</Link>
+                    <Link onClick={closeBar} to="/leaderboard">Leaderboard</Link>
+                    <Link onClick={closeBar} to="/devices">Devices</Link>
                 </div>
             </div>
             }
