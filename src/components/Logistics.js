@@ -1,8 +1,15 @@
 import { LineChart, BarChart, Line, XAxis, ReferenceLine, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts"
-import {BoxShadow, NavbarHeight} from "../constants"
+import {BoxShadow, GreenRegular, NavbarHeight} from "../constants"
 import avgEnergyData from "../data/averageEnergyUsage.json"
+import avgCostData from "../data/averageCost.json"
 
 export const Logistics = () => {
+
+    const getFullHour = () => {
+        const h = (new Date()).getHours()
+        return (h < 10) ? `0${h}:00` : `${h}:00`
+    }
+
     return (
         <div id="logistics" style={{
             width: "100vw",
@@ -10,26 +17,60 @@ export const Logistics = () => {
             position: "absolute",
             top: NavbarHeight
         }}>
+            {/* Graph 1 */} 
             <div style={{
                 boxShadow: BoxShadow,
                 padding: 8,
-                border: "1px solid white",
+                margin: 12,
+                borderRadius: 7,
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                alignItems: "center"
+                alignItems: "start"
             }}>
-                <h3>
-                    Average Energy Consumption
+                <h3 style={{
+                    marginLeft: 25,
+                    fontSize: 20
+                    }}>
+                    Average <span style={{ color: GreenRegular }}>Energy</span> Consumption
                 </h3>
                 <LineChart
-                    width={375}
+                    width={330}
                     height={300}
                     data={avgEnergyData}
                 >
                     <XAxis dataKey="Time" tick={{ fontSize: 10 }}/>
                     <YAxis tick={{ fontSize: 12 }} unit="kWh"/>
-                    <ReferenceLine x="11:00" stroke="white"/>
+                    <ReferenceLine x={getFullHour()} stroke="white"/>
+                    <Line type="monotone" dataKey="Energy Usage" stroke="green" strokeWidth="2" dot={false} />
+                </LineChart>
+            </div>
+
+            {/* Graph 2 */} 
+            <div style={{
+                boxShadow: BoxShadow,
+                padding: 8,
+                margin: 12,
+                borderRadius: 7,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "start"
+            }}>
+                <h3 style={{
+                    marginLeft: 25,
+                    fontSize: 20
+                    }}>
+                    Average <span style={{ color: GreenRegular }}>Expenses</span>
+                </h3>
+                <LineChart
+                    width={330}
+                    height={300}
+                    data={avgCostData}
+                >
+                    <XAxis dataKey="Time" tick={{ fontSize: 10 }}/>
+                    <YAxis tick={{ fontSize: 12 }} unit="kWh"/>
+                    <ReferenceLine x={getFullHour()} stroke="white"/>
                     <Line type="monotone" dataKey="Energy Usage" stroke="green" strokeWidth="2" dot={false} />
                 </LineChart>
             </div>
