@@ -69,9 +69,9 @@ export const Logistics = () => {
                     data={avgCostData}
                 >
                     <XAxis dataKey="Time" tick={{ fontSize: 10 }}/>
-                    <YAxis tick={{ fontSize: 12 }} unit="kWh"/>
+                    <YAxis tick={{ fontSize: 12 }} unit="$"/>
                     <ReferenceLine x={getFullHour()} stroke="white"/>
-                    <Line type="monotone" dataKey="Energy Usage" stroke="green" strokeWidth="2" dot={false} />
+                    <Line type="monotone" dataKey="Expenses" stroke="green" strokeWidth="2" dot={false} />
                 </LineChart>
             </div>
         </div>
