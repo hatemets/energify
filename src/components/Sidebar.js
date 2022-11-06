@@ -6,7 +6,13 @@ export const SideBar = ({ isOpen, setOpen }) => {
     return (
         <>
             { isOpen && 
-            <div id="sidebar">
+            <div id="sidebar" style={{
+                width: 375,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alighItems: "center"
+            }}>
                 <div className="container">
                     <Link onClick={closeBar} to="/">Dashboard</Link>
                     <Link onClick={closeBar} to="/logistics">Logistics</Link>

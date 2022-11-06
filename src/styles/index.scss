@@ -4,12 +4,49 @@
 @import "./TopBar.scss";
 @import "./Leaderboard.scss";
 
+html {
+    background: black !important;
+    
+    ::-webkit-scrollbar {
+        overflow-x: hidden;
+        display: none;
+        visibility: hidden;
+    }
+}
+
+
+/* lineup class and keyframes */
+.line-up {
+    animation: 2s anim-lineUp ease-out;
+}
+
+@keyframes anim-lineUp {
+    0% {
+        opacity: 0;
+        transform: translateY(80%);
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
 body {
     margin: 0;
-    background: $darker;
+    background: black; // $darker;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -19,21 +56,28 @@ body {
     }
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+    background: $darker;
 }
 
-*, *:before, *:after {
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+*,
+*:before,
+*:after {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     color: $light;
+    // overflow: hidden;
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+        monospace;
 }
 
 .center-children {
@@ -52,7 +96,7 @@ code {
 //     background-color: $dark;
 //     padding: 0;
 //     color: $light;
-    
+
 //     @include md {
 //         margin-top: $navbarHeightLarge;
 //     }

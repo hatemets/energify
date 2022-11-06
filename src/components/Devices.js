@@ -1,5 +1,4 @@
 import { Room } from "./Room"
-import { useState } from "react"
 
 export const Devices = () => {
     const kitchenItems = [
@@ -33,16 +32,23 @@ export const Devices = () => {
         { name: "PlayStation", isOn: false },
         { name: "Space Heater", isOn: false },
         { name: "Lamp", isOn: true },
-        { name: "SmartWatch Charger", isOn: false}
+        { name: "SmartWatch Charger", isOn: false }
     ]
 
     return (
-        <div style={{ position: "absolute", top: 89, width: "100vw", height: "100vh" }}>
+        <div style={{ paddingTop: 70, width: "100%", height: "100%", overflow: "auto" }}>
+            <div className="first-row" style={{
+                display: "flex",
+                justifyContent: "space-evenly",
+                width: "375 !important"
+            }}>
+                <Room name="Kitchen" items={kitchenItems} />
+            </div>
+
             <div className="first-row" style={{
                 display: "flex",
                 justifyContent: "space-evenly",
             }}>
-                <Room name="Kitchen" items={kitchenItems} />
                 <Room name="Bathroom" items={bathroomItems} />
             </div>
 
@@ -51,6 +57,12 @@ export const Devices = () => {
                 justifyContent: "space-evenly"
             }}>
                 <Room name="Bedroom" items={bedroomItems} />
+            </div>
+
+            <div className="second-row" style={{
+                display: "flex",
+                justifyContent: "space-evenly"
+            }}>
                 <Room name="Living Room" items={livingRoomItems} />
             </div>
         </div>

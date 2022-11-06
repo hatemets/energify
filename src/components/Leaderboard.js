@@ -1,12 +1,20 @@
-import { useState } from "react"
 import { BoxShadow } from "../constants"
 import {CouldDoBetter} from "./CouldDoBetter"
 import { useEffect } from "react"
 import { ToastContainer, toast } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css'
 
+const people = [
+    { name: "Abdi", energySaved: 78 },
+    { name: "Nil", energySaved: 72 },
+    { name: "Jason", energySaved: 69 },
+    { name: "Tuukka", energySaved: 68 },
+    { name: "You", energySaved: 63 }
+]
+const targetPerson = "You"
 
 export const Leaderboard = () => {
+<<<<<<< HEAD
     const [position, setPosition] = useState(5)
     const [people, setPeople] = useState([
         { name: "Abdi", energySaved: 78 },
@@ -36,11 +44,13 @@ export const Leaderboard = () => {
             })
         }, 2500)
     }, [])
+=======
+>>>>>>> tm/optimize-all
 
     return (
         <div id="leaderboard">
-            <div style={{ width: "100vw", display: "flex", justifyContent: "center", alignItems: "end", color: "#dedede" }}>
-                <span style={{ marginBottom: 8, marginRight: 8, fontStyle: "italic", fontWeight: "bold", fontSize: "2.5rem" }}># </span><span style={{ fontSize: "5rem", fontWeight: "bold" }} id="pos">{ position }</span>
+            <div style={{ width: "100%", display: "flex", justifyContent: "center", alignItems: "end", color: "#dedede" }}>
+                <span style={{ marginBottom: 8, marginRight: 8, fontStyle: "italic", fontWeight: "bold", fontSize: "2.5rem" }}># </span><span style={{ fontSize: "5rem", fontWeight: "bold" }} id="pos">5</span>
             </div>
 
             <div className="center-children">
@@ -55,8 +65,8 @@ export const Leaderboard = () => {
             <div style={{
                 background: "#222226",
                 margin: "auto",
-                width: "70vw",
-                height: "30vh",
+                width: "70%",
+                height: "30%",
                 borderRadius: 7,
                 boxShadow: BoxShadow,
                 display: "flex",

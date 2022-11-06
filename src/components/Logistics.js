@@ -1,4 +1,4 @@
-import { LineChart, Legend, Bar, BarChart, Line, XAxis, ReferenceLine, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts"
+import { LineChart,  Bar, BarChart, Line, XAxis, ReferenceLine, YAxis,  Tooltip} from "recharts"
 import {BoxShadow, GreenDarker, GreenRegular, NavbarHeight} from "../constants"
 import avgEnergyData from "../data/averageEnergyUsage.json"
 import avgCostData from "../data/averageCost.json"
@@ -30,10 +30,12 @@ export const Logistics = () => {
 
     return (
         <div id="logistics" style={{
-            width: "100vw",
-            height: "100vh",
-            position: "absolute",
-            top: NavbarHeight
+            width: "100%",
+            height: "100%",
+            top: NavbarHeight,
+            overflow: "auto",
+            marginTop: 70,
+            maxHeight: 1000 - 70
         }}>
             {/* Graph 1 */} 
             <div style={{

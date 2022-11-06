@@ -3,12 +3,12 @@
 
 #nav {
     position: fixed;
-    height: $navbarHeight !important;
     height: 70px;
     overflow: hidden;
     top: 0;
     background-color: $darker;
-    width: 100vw;
+    width: 100%;
+    max-width: 500px;
     display: flex;
     justify-content: space-between;
     z-index: 2;
@@ -36,30 +36,25 @@
     }
 }
 
+#nav {
+    align-items: center;
+    padding: 0 0.5rem;
 
+    .links {
+        display: none;
+    }
 
-/* Hamburger menu */
-@media screen and (max-width: 480px) {
-    #nav {
-        height: 12vh;
-        align-items: center;
-        padding: 0 0.5rem;
+    #bell-icon {
+        transform: scale(2);
+        margin-right: 2.5rem;
+    }
 
-        .links {
-            display: none;
-        }
-
-        #bell-icon {
-            transform: scale(2);
-            margin-right: 2.5rem;
-        }
-
-        #menu-icon {
-            display: initial;
-            margin-right: 5vw;
-            margin-left: 1rem;
-            cursor: pointer;
-            z-index: 1;
-        }
+    #menu-icon {
+        display: initial;
+        margin-right: 5vw;
+        margin-left: 1rem;
+        cursor: pointer;
+        z-index: 1;
     }
 }
+
