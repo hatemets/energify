@@ -5,6 +5,33 @@ The app can be visited using the following links:
 - https://junction-energify.netlify.app/
 - https://energify.miettinen.dev/
 
+# Introduction
+
+## What?
+Energify is an optimizing solution to real-time energy consumption patterns and waste. We seek to lower users' emissions, bills, and stigma toward clean and renewable energy by providing solutions based on consumer habits.
+
+## Why?
+As the world moves further into the digital age, our usage of appliances has reached a wasteful amount; almost 40% of the energy produced in the world is released as waste. As a group, we looked into many ways of reducing this figure and how our technical backgrounds could guide us with it. Having experience with electrical appliances before, as well as the opportunities for real-world implementation it provides, we aimed to provide a hardware solution that can be used in collaboration with our application to reduce energy consumption. 
+
+## How?
+Using a ZigBee and smart plug provided by BCG, with Bluetooth for range detection, we were able to create a proximity-triggered smart lighting fixture to demonstrate a use case of how hardware could be used in the optimization of energy saving. This demo also promises a great future as it can easily be extended to other use cases. For instance, through the ZigBee module, different home appliances can be easily accessed and controlled. Furthermore, the implementation of cheap yet efficient electronics such as LoRa for longer distances and ESP for room switching detection would allow diverse and reliable communication improving the automation for the strategic energy cuts.  
+
+## Tech.
+On our software side, we used data science to drive our analysis from provided datasets of when energy is most consumed and most costly. From this data, we deduce and suggest optimal energy usage (for example, when to turn on and off appliances based on sleep patterns). We also look to provide remote control of appliances through the application and our electrical hardware usage. In addition to all of this, Energify looks to quantify for the average person how much energy they saved (both in terms of money and #trees saved), and finally include an interest-piquing solution in the sense of competing with your friends in a leaderboard-style page.
+
+## Future.
+As we look into the future implementations of this application, the potential use cases and dataset usages are exciting. Using different datasets, more learned predictions as well as implementing longer ranges and more reliable hardware solutions, we can make tomorrow greener than today.
+
+# This repo
+
+`./` root of this directory is a React app, with a visualization of our product.
+
+`./data_analysis` directory contains Python scripts for downloading data sets and analyzing them with pandas. The data sets include weather data, electricity usage data, and other relevant data that was of interest to us.
+
+`./presence_detection` directory contains information on how our presence detection feature works using ZigBee, Bluetooth and Python.
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -33,44 +60,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# energify
