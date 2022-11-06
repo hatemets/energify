@@ -30,12 +30,11 @@ export const Logistics = () => {
 
     return (
         <div id="logistics" style={{
-            overflow: "hidden",
             width: "100%",
             height: "100%",
             top: NavbarHeight,
             overflow: "auto",
-            marginTop: 70,
+            marginTop: 90,
             maxHeight: 1000 - 70
         }}>
             {/* Graph 1 */} 
