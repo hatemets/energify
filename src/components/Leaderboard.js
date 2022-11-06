@@ -1,7 +1,6 @@
 import { BoxShadow } from "../constants"
 import {CouldDoBetter} from "./CouldDoBetter"
-import { useEffect } from "react"
-import { ToastContainer, toast } from "react-toastify"
+import { ToastContainer} from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css'
 
 const people = [
@@ -11,41 +10,8 @@ const people = [
     { name: "Tuukka", energySaved: 68 },
     { name: "You", energySaved: 63 }
 ]
-const targetPerson = "You"
 
 export const Leaderboard = () => {
-<<<<<<< HEAD
-    const [position, setPosition] = useState(5)
-    const [people, setPeople] = useState([
-        { name: "Abdi", energySaved: 78 },
-        { name: "Nil", energySaved: 72 },
-        { name: "Jason", energySaved: 69 },
-        { name: "Tuukka", energySaved: 68 },
-        { name: "You", energySaved: 63 }
-    ])
-
-    useEffect(() => {
-        setTimeout(() => {
-            let newPeople = [...people]
-            const tmp = newPeople[3]
-            tmp.energySaved -= 3
-            newPeople[4].energySaved += 4
-            newPeople[3] = newPeople[4]
-            newPeople[4] = tmp
-            setPeople(newPeople)
-
-            toast.success("Congratulations, you reached 4th place!", {
-                position: "top-center",
-                autoClose: 1500,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-            })
-        }, 2500)
-    }, [])
-=======
->>>>>>> tm/optimize-all
 
     return (
         <div id="leaderboard">
