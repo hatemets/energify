@@ -15,8 +15,9 @@ const App = () => {
                 <Box className="app" sx={{
                     width: "100vw",
                     height: "100vh",
-                    maxWidth: 500,
-                    maxHeight: 1000-70,
+                    maxWidth: 375,
+                    // maxHeight: 1000-70,
+                    minHeight: 812,
                     margin: "auto",
                     position: "relative"
                     // display: "flex",

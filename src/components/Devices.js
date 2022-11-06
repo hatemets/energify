@@ -41,6 +41,7 @@ export const Devices = () => {
             <div className="first-row" style={{
                 display: "flex",
                 justifyContent: "space-evenly",
+                width: "375 !important"
             }}>
                 <Room name="Kitchen" items={kitchenItems} />
             </div>
