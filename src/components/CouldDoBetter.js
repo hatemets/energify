@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { GreenRegular, BoxShadow } from "../constants"
-import { ToastContainer, toast } from "react-toastify"
+import { ToastContainer } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css'
 import { Link } from "react-router-dom"
 import { useState } from "react"
@@ -49,10 +49,6 @@ function CircularProgressWithLabel(props) {
             </Box>
         </Box>
     );
-}
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 export const CouldDoBetter = () => {
