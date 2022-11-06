@@ -30,8 +30,8 @@ export const Logistics = () => {
 
     return (
         <div id="logistics" style={{
-            width: "100vw",
-            height: "100vh",
+            width: "100%",
+            height: "100%",
             position: "absolute",
             top: NavbarHeight
         }}>

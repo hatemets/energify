@@ -17,7 +17,7 @@ export const Leaderboard = () => {
 
     return (
         <div id="leaderboard">
-            <div style={{ width: "100vw", display: "flex", justifyContent: "center", alignItems: "end", color: "#dedede" }}>
+            <div style={{ width: "100%", display: "flex", justifyContent: "center", alignItems: "end", color: "#dedede" }}>
                 <span style={{ marginBottom: 8, marginRight: 8, fontStyle: "italic", fontWeight: "bold", fontSize: "2.5rem" }}># </span><span style={{ fontSize: "5rem", fontWeight: "bold" }} id="pos">{ position }</span>
             </div>
 
@@ -33,8 +33,8 @@ export const Leaderboard = () => {
             <div style={{
                 background: "#222226",
                 margin: "auto",
-                width: "70vw",
-                height: "30vh",
+                width: "70%",
+                height: "30%",
                 borderRadius: 7,
                 boxShadow: BoxShadow,
                 display: "flex",
