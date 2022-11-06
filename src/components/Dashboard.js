@@ -42,7 +42,7 @@ export const Dashboard = () => {
                 marginBottom: 20, 
                 marginTop: 70 
             }}>
-                <p style={{ fontSize: 90, margin: "0", padding: "0", color: "#1BB565", fontWeight: "bolder" }}>67%<i style={{ fontSize: 20, color: LightGrey, fontWeight: "lighter" }}>/kWh</i></p>
+                <p style={{ fontSize: 90, margin: "0", padding: "0", color: "#1BB565", fontWeight: "bolder" }}>67%<i style={{ fontSize: 20, color: LightGrey, fontStyle: "normal", fontWeight: "lighter" }}>/kWh</i></p>
                 <p style={{ textDecoration: "underline", margin: "0", padding: "0", color: LightGrey, textDecorationColor: "#1BB565", }}>compared to last month</p>
             </div>
 

@@ -1,4 +1,4 @@
-import { LineChart,  Bar, BarChart, Line, XAxis, ReferenceLine, YAxis,  Tooltip} from "recharts"
+import { LineChart,  Bar, BarChart, Line, XAxis, ReferenceLine, YAxis,  Tooltip, Legend} from "recharts"
 import {BoxShadow, GreenDarker, GreenRegular, NavbarHeight} from "../constants"
 import avgEnergyData from "../data/averageEnergyUsage.json"
 import avgCostData from "../data/averageCost.json"
@@ -62,7 +62,9 @@ export const Logistics = () => {
                     <XAxis dataKey="Time" tick={{ fontSize: 10 }}/>
                     <YAxis tick={{ fontSize: 12 }} unit="kWh"/>
                     <ReferenceLine x={getFullHour()} stroke="white"/>
-                    <Line type="monotone" dataKey="Energy Usage" stroke="green" strokeWidth="2" dot={false} />
+                    <Legend verticalAlign="top" height={60} />
+                    <Line type="monotone" dataKey="Energy Usage" stroke="green" strokeWidth="1" dot={false} />
+                    <Line name="Current hour" type="monotone" dataKey="Current hour" stroke="white" />
                 </LineChart>
             </div>
 
@@ -90,10 +92,89 @@ export const Logistics = () => {
                 >
                     <XAxis dataKey="Time" tick={{ fontSize: 10 }}/>
                     <YAxis tick={{ fontSize: 12 }} unit="€"/>
-                    <ReferenceLine x={getFullHour()} stroke="white"/>
-                    <Line type="monotone" dataKey="Expenses" stroke="green" strokeWidth="2" dot={false} />
+                    <ReferenceLine name="Current hour" x={getFullHour()} stroke="white"/>
+                    <ReferenceLine name="Optimal hour" x={"20:00"} stroke="gold" />
+                    <Legend verticalAlign="top" height={60} />
+                    <Line type="monotone" dataKey="Expenses" stroke="green" strokeWidth="1" dot={false} />
+                    <Line name="Current hour" type="monotone" dataKey="Current hour" stroke="white" />
+                    <Line name="Optimal hour" type="monotone" dataKey="Optimal hour" stroke="gold" />
                 </LineChart>
             </div>
+
+
+            {/* Personalized recommendations */}
+            <div style={{
+                boxShadow: BoxShadow,
+                padding: 8,
+                margin: 12,
+                borderRadius: 7,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center"
+            }}>
+                <p style={{
+                    fontSize: 20,
+                    textAlign: "center",
+                    margin: 12
+                }}>Your average sleep interval is</p>
+                <p style={{
+                    fontSize: 48,
+                    margin: 0,
+                    paddingTop: 0,
+                    paddingBottom: 12,
+                    fontWeight: "bold"
+                }}>22:30 – 7.45</p>
+            </div>
+
+            <div style={{
+                boxShadow: BoxShadow,
+                padding: 8,
+                margin: 12,
+                borderRadius: 7,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center"
+            }}>
+                <p style={{
+                    fontSize: 20,
+                    margin: 12,
+                    textAlign: "center"
+                }}>The most efficient energy usage during wake hours:</p>
+                <p style={{
+                    fontSize: 38,
+                    margin: 0,
+                    paddingTop: 0,
+                    fontWeight: "bold",
+                    color: GreenRegular
+                }}>20:00</p>
+                <p style={{
+                    margin: 0,
+                    padding: 0,
+                    fontSize: 18,
+                    fontWeight: "bold"
+                }}>at</p>
+                <div style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "100%"
+                }}>
+                    <p style={{
+                        fontSize: 48,
+                        margin: 0,
+                        paddingTop: 0,
+                        paddingBottom: 12,
+                        color: GreenRegular
+                    }}>€0.11</p>
+                    <p style={{
+                        marginTop: 25,
+                        fontSize: 18
+                    }}>/kWh</p>
+                </div>
+            </div>
+
 
             {/* Graph 3 */} 
             <div style={{
