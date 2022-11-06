@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom"
 import { LightGrey } from "../constants"
 
 const boxStyle = {
@@ -91,22 +92,44 @@ export const Dashboard = () => {
                         alignItems: "center",
                         justifyContent: "center"
                     }}>
-                        <span style={{marginTop: 20, fontSize: "1.5rem", marginRight: 5, fontWeight: "bold" }}>#</span><span style={{color: LightGrey, fontWeight: "bold", fontSize: "3.4rem", margin: 0, padding: 0,}}>5</span>
+                        <Link to="/leaderboard">
+                            <span style={{marginTop: 20, fontSize: "1.5rem", marginRight: 5, fontWeight: "bold" }}>#</span><span style={{color: LightGrey, fontWeight: "bold", fontSize: "3.4rem", margin: 0, padding: 0 }}>5</span>
+                        </Link>
                     </div>
                     <p style={{color: LightGrey, fontSize: "0.8rem", margin: 0, padding: 0, position: "absolute", bottom: 15}}>Leaderboard Position</p>
                 </div>
             </div>
 
-            <div style={{...boxStyle2, paddingTop: 0,}}>
-                <div className="tiles-energy" style={{marginBottom: 25,}}>
-                    <div style={{...boxStyle3, float: "left", marginLeft: 0,}}>
-                        <p style={{color: "#1BB565", fontSize: "2.4rem", margin: 0, padding: 0,}}>81%</p>
-                        <p style={{color: LightGrey, fontSize: "0.8rem", margin: 0, padding: 0, position: "absolute", bottom: 15}}>avg, Daily / Historic</p>
-                    </div>
-                    <div style={{...boxStyle3, float: "right", marginRight: 0,}}>
-                        <p style={{color: LightGrey, fontSize: "2.4rem", margin: 0, padding: 0,}}>$117</p>
-                        <p style={{color: LightGrey, fontSize: "0.8rem", margin: 0, padding: 0, position: "absolute", bottom: 15}}>$ saved since <b>October</b></p>
-                    </div>
+            <div style={{...boxStyle2, height: "120%", padding: 6, marginBottom: 18 }}>
+                <div style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    padding: 8
+                    }}>
+                    <p style={{
+                        margin: 0,
+                        fontSize: 18
+                    }}>Next cheapest energy price</p>
+                    <p style={{
+                        fontSize: 28,
+                        margin: 0,
+                        paddingTop: 12,
+                        marginBottom: -6,
+                        fontWeight: "bold"
+                    }}>at 14.30</p>
+                    <p style={{
+                        fontSize: 68,
+                        margin: 0,
+                        padding: 0,
+                        color: "lightblue"
+                    }}>€0.08</p>
+                    <p style={{
+                        margin: 0,
+                        fontSize: 18,
+                        paddingBottom: 6
+                    }}>/kWh</p>
                 </div>
             </div>
         </div>
