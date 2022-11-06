@@ -35,7 +35,7 @@ export const Room = ({ name, items }) => {
                 borderBottomRightRadius: 7,
                 }}>
                 {
-                    items.map(item => <li><Item name={item.name} isOn={item.isOn} /></li>)
+                    items.map((item, i) => <li key={i}><Item name={item.name} isOn={item.isOn} /></li>)
                 }
             </ul>
         </div>

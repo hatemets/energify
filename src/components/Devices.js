@@ -41,7 +41,7 @@ export const Devices = () => {
             <div className="first-row" style={{
                 display: "flex",
                 justifyContent: "space-evenly",
-                }}>
+            }}>
                 <Room name="Kitchen" items={kitchenItems} />
                 <Room name="Bathroom" items={bathroomItems} />
             </div>
@@ -49,7 +49,7 @@ export const Devices = () => {
             <div className="second-row" style={{
                 display: "flex",
                 justifyContent: "space-evenly"
-                }}>
+            }}>
                 <Room name="Bedroom" items={bedroomItems} />
                 <Room name="Living Room" items={livingRoomItems} />
             </div>

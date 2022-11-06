@@ -54,7 +54,7 @@ export const Leaderboard = () => {
                             margin: "0.5rem 0"
                         }}>
                             <span style={{ color: `${targetPerson === p.name ? "orange" : "#dedede"}` }}>{i + 1} - {p.name}</span>
-                            <span>{p.energySaved}% saved</span>
+                            <span style={{ color: `${targetPerson === p.name ? "orange" : "#dedede"}` }}>{p.energySaved}% saved</span>
                         </div>)
                     }
                 </ul>
