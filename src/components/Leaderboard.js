@@ -8,9 +8,9 @@ export const Leaderboard = () => {
     const [people, setPeople] = useState([
         { name: "Abdi", energySaved: 78 },
         { name: "Nil", energySaved: 72 },
-        { name: "You", energySaved: 69 },
+        { name: "Jason", energySaved: 69 },
         { name: "Tuukka", energySaved: 68 },
-        { name: "Jason", energySaved: 63 }
+        { name: "You", energySaved: 63 }
     ])
 
     const targetPerson = "You"
