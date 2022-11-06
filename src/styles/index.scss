@@ -6,6 +6,12 @@
 
 html {
     background: black !important;
+    
+    ::-webkit-scrollbar {
+        overflow-x: hidden;
+        display: none;
+        visibility: hidden;
+    }
 }
 
 body {
@@ -37,6 +43,7 @@ code {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     color: $light;
+    overflow: hidden;
 }
 
 code {
