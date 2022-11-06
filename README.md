@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Energy conservation app for everyday users
+
+This product is perfect for conserving energy and monitor your electric devices from one place. The app is built with React. To run the app on your platform, please follow the instruction below.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
