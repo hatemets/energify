@@ -23,7 +23,10 @@ export const Leaderboard = () => {
 
             <div className="center-children">
                 <p style={{
-                    margin: "auto"
+                    margin: "auto",
+                    fontSize: 18,
+                    marginBottom: 0,
+                    paddingBottom: 0
                 }}>Leaderboard Position</p>
             </div>
 

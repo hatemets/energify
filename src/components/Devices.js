@@ -16,7 +16,7 @@ export const Devices = () => {
         { name: "Shaver", isOn: false },
         { name: "Toothbrush", isOn: false },
         { name: "Ventilation", isOn: false },
-        { name: "Hairdryes", isOn: true },
+        { name: "Hairdryer", isOn: true },
     ]
 
     const bedroomItems = [
