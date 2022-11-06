@@ -16,7 +16,7 @@ const App = () => {
                     width: "100vw",
                     height: "100vh",
                     maxWidth: 500,
-                    maxHeight: 1000,
+                    maxHeight: 1000-70,
                     margin: "auto",
                     position: "relative"
                     // display: "flex",

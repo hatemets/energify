@@ -32,8 +32,10 @@ export const Logistics = () => {
         <div id="logistics" style={{
             width: "100%",
             height: "100%",
-            position: "absolute",
-            top: NavbarHeight
+            top: NavbarHeight,
+            overflow: "auto",
+            marginTop: 70,
+            maxHeight: 1000 - 70
         }}>
             {/* Graph 1 */} 
             <div style={{
