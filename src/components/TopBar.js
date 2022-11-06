@@ -4,8 +4,8 @@ import { useState, useEffect } from "react"
 import { Spin as Hamburger } from "hamburger-react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBell } from '@fortawesome/fontawesome-free-solid'
-import {SideBar} from "./Sidebar"
-import {LightGrey} from "../constants"
+import { SideBar } from "./Sidebar"
+import { LightGrey } from "../constants"
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css'
@@ -74,13 +74,13 @@ export const TopBar = () => {
     return (
         <>
             <nav id="nav" style={{
-                width: 375
-                }}>
+                maxWidth: 375
+            }}>
                 <span id="menu-icon">
                     <Hamburger rounded size={40} color={LightGrey} toggled={isOpen} toggle={setOpen} />
                 </span>
 
-                <p style={{ fontSize: 24, fontWeight: "bold" }}>{ title }</p>
+                <p style={{ fontSize: 24, fontWeight: "bold" }}>{title}</p>
 
                 <Link onClick={handleBellClick} id="logo-link">
                     <FontAwesomeIcon id="bell-icon" color={LightGrey} icon={faBell} />

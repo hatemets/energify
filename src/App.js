@@ -7,7 +7,6 @@ import { Dashboard } from "./components/Dashboard"
 import { Logistics } from "./components/Logistics"
 import Box from '@mui/material/Box';
 
-
 const App = () => {
     return (
         <div id="App">
