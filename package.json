@@ -31,7 +31,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && echo '/* /index.html  200' | cat >build/_redirects ",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy_miettinen_dev": "npm run build && aws s3 sync build/ s3://energify.miettinen.dev --cache-control max-age=172800 --delete && aws configure set preview.cloudfront true && aws  cloudfront create-invalidation --distribution-id E268GBRQNK8MT3 --paths /index.html"
