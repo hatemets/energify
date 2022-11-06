@@ -30,6 +30,7 @@ export const Logistics = () => {
 
     return (
         <div id="logistics" style={{
+            overflow: "hidden",
             width: "100%",
             height: "100%",
             top: NavbarHeight,
