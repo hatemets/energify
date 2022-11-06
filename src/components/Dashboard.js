@@ -66,7 +66,7 @@ export const Dashboard = () => {
                 </div>
                 <div style={{ ...boxStyle, float: "right", marginRight: 14, }}>
                     <p style={{ color: LightGrey, fontSize: "2.4rem", margin: 0, padding: 0, }}>$117</p>
-                    <p style={{ color: LightGrey, fontSize: "0.8rem", margin: 0, padding: 0, position: "absolute", bottom: 15 }}>$ saved since <b>October</b></p>
+                    <p style={{ color: LightGrey, fontSize: "0.8rem", margin: 0, padding: 0, position: "absolute", bottom: 15 }}>saved since <b>October</b></p>
                 </div>
             </div>
 
@@ -92,6 +92,7 @@ export const Dashboard = () => {
                     <p style={{ color: "#1BB565", fontWeight: "bold", fontSize: "2rem", margin: 0, padding: 0, }}>23</p>
                     <p style={{ color: LightGrey, fontSize: "0.8rem", margin: 0, padding: 0, position: "absolute", bottom: 15 }}>Trees Saved</p>
                 </div>
+                <Link to="/leaderboard">
                 <div style={{ ...boxStyle, float: "right", marginRight: 14, }}>
                     <div style={{
                         display: "flex",
@@ -99,12 +100,11 @@ export const Dashboard = () => {
                         alignItems: "center",
                         justifyContent: "center"
                     }}>
-                        <Link to="/leaderboard">
                             <span style={{ marginTop: 20, fontSize: "1.5rem", marginRight: 5, fontWeight: "bold" }}>#</span><span style={{ color: LightGrey, fontWeight: "bold", fontSize: "3.4rem", margin: 0, padding: 0 }}>5</span>
-                        </Link>
                     </div>
                     <p style={{ color: LightGrey, fontSize: "0.8rem", margin: 0, padding: 0, position: "absolute", bottom: 15 }}>Leaderboard Position</p>
                 </div>
+                </Link>
             </div>
 
             <div style={{ ...boxStyle2, height: "120%", padding: 6, marginBottom: 18 }}>
