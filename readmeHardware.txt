@@ -12,4 +12,4 @@ For API connection:
 - This is needed to change states of smart appliances in DeCONZ through info gathered on from Bluetooth data in a Python Code
 - Follow the steps in the following link to get access to API gateway https://dresden-elektronik.github.io/deconz-rest-doc/getting_started/
 
-Run the python file to get access to DEMO
+Run the python file (readlog.py) to get access to DEMO
