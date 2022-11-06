@@ -210,7 +210,8 @@ export const Logistics = () => {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                alignItems: "start"
+                alignItems: "start",
+                marginBottom: 50
             }}>
                 <h3 style={{
                     marginLeft: 25,

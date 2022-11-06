@@ -61,7 +61,8 @@ export const Devices = () => {
 
             <div className="second-row" style={{
                 display: "flex",
-                justifyContent: "space-evenly"
+                justifyContent: "space-evenly",
+                marginBottom: 50
             }}>
                 <Room name="Living Room" items={livingRoomItems} />
             </div>
