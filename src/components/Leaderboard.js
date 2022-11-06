@@ -1,24 +1,21 @@
-import { useState } from "react"
 import { BoxShadow } from "../constants"
 import {CouldDoBetter} from "./CouldDoBetter"
 
+const people = [
+    { name: "Abdi", energySaved: 78 },
+    { name: "Nil", energySaved: 72 },
+    { name: "Jason", energySaved: 69 },
+    { name: "Tuukka", energySaved: 68 },
+    { name: "You", energySaved: 63 }
+]
+const targetPerson = "You"
 
 export const Leaderboard = () => {
-    const [position, setPosition] = useState(5)
-    const [people, setPeople] = useState([
-        { name: "Abdi", energySaved: 78 },
-        { name: "Nil", energySaved: 72 },
-        { name: "Jason", energySaved: 69 },
-        { name: "Tuukka", energySaved: 68 },
-        { name: "You", energySaved: 63 }
-    ])
-
-    const targetPerson = "You"
 
     return (
         <div id="leaderboard">
             <div style={{ width: "100%", display: "flex", justifyContent: "center", alignItems: "end", color: "#dedede" }}>
-                <span style={{ marginBottom: 8, marginRight: 8, fontStyle: "italic", fontWeight: "bold", fontSize: "2.5rem" }}># </span><span style={{ fontSize: "5rem", fontWeight: "bold" }} id="pos">{ position }</span>
+                <span style={{ marginBottom: 8, marginRight: 8, fontStyle: "italic", fontWeight: "bold", fontSize: "2.5rem" }}># </span><span style={{ fontSize: "5rem", fontWeight: "bold" }} id="pos">5</span>
             </div>
 
             <div className="center-children">

@@ -30,19 +30,6 @@ const boxStyle2 = {
     alignItems: "center",
 }
 
-const boxStyle3 = {
-    position: "relative",
-    background: "#232328",
-    margin: "auto",
-    padding: 0,
-    width: "44%",
-    height: "18%",
-    borderRadius: 7,
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-}
 
 export const Dashboard = () => {
     return (

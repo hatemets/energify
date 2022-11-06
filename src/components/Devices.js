@@ -1,5 +1,4 @@
 import { Room } from "./Room"
-import { useState } from "react"
 
 export const Devices = () => {
     const kitchenItems = [
