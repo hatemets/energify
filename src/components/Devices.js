@@ -37,10 +37,11 @@ export const Devices = () => {
     ]
 
     return (
-        <div style={{ position: "absolute", top: 89, width: "100vw", height: "100vh" }}>
+        <div style={{ maxWidth: 375, position: "absolute", top: 89, width: "100vw", height: "100vh" }}>
             <div className="first-row" style={{
                 display: "flex",
                 justifyContent: "space-evenly",
+                width: "375 !important"
             }}>
                 <Room name="Kitchen" items={kitchenItems} />
                 <Room name="Bathroom" items={bathroomItems} />

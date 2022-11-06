@@ -115,6 +115,7 @@ export const CouldDoBetter = () => {
                         background: GreenRegular,
                         color: "white",
                         fontSize: 24,
+                        padding: 6,
                         fontWeight: "bold",
                         textAlign: "center"
                     }}>

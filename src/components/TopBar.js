@@ -71,7 +71,9 @@ export const TopBar = () => {
 
     return (
         <>
-            <nav id="nav">
+            <nav id="nav" style={{
+                width: 375
+                }}>
                 <span id="menu-icon">
                     <Hamburger rounded size={40} color={LightGrey} toggled={isOpen} toggle={setOpen} />
                 </span>

@@ -4,7 +4,7 @@ import { Item } from "./Item"
 export const Room = ({ name, items }) => {
     return (
         <div style={{
-            width: "47vw",
+            width: 170,
             boxShadow: BoxShadow,
             marginTop: "1rem",
             marginBottom: -8,
