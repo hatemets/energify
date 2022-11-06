@@ -46,10 +46,11 @@ export const Leaderboard = () => {
                     margin: 0,
                     marginTop: 0
                 }}>Top 5</h5>
-                <ul style={{ width: "70%" }}>
+                <ul style={{ width: "80%" }}>
                     {
                         people.map((p, i) => <div key={i} style={{
                             display: "flex",
+                            fontSize: 18,
                             justifyContent: "space-between",
                             margin: "0.5rem 0"
                         }}>
