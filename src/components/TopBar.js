@@ -26,6 +26,7 @@ export const TopBar = () => {
             pauseOnHover: true,
             draggable: true,
         })
+
         toast.success("Turned off the oven!", {
             position: "top-center",
             autoClose: 1500,
@@ -34,6 +35,7 @@ export const TopBar = () => {
             pauseOnHover: true,
             draggable: true,
         })
+
         toast.success("Turned off the desk lamp!", {
             position: "top-center",
             autoClose: 1500,
@@ -78,7 +80,7 @@ export const TopBar = () => {
 
                 <p style={{ fontSize: 24, fontWeight: "bold" }}>{ title }</p>
 
-                <Link onClick={handleBellClick} to="/" id="logo-link">
+                <Link onClick={handleBellClick} id="logo-link">
                     <FontAwesomeIcon id="bell-icon" color={LightGrey} icon={faBell} />
                 </Link>
             </nav>

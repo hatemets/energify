@@ -1,6 +1,9 @@
 import { useState } from "react"
 import { BoxShadow } from "../constants"
 import {CouldDoBetter} from "./CouldDoBetter"
+import { useEffect } from "react"
+import { ToastContainer, toast } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css'
 
 
 export const Leaderboard = () => {
@@ -13,7 +16,26 @@ export const Leaderboard = () => {
         { name: "You", energySaved: 63 }
     ])
 
-    const targetPerson = "You"
+    useEffect(() => {
+        setTimeout(() => {
+            let newPeople = [...people]
+            const tmp = newPeople[3]
+            tmp.energySaved -= 3
+            newPeople[4].energySaved += 4
+            newPeople[3] = newPeople[4]
+            newPeople[4] = tmp
+            setPeople(newPeople)
+
+            toast.success("Congratulations, you reached 4th place!", {
+                position: "top-center",
+                autoClose: 1500,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+            })
+        }, 2500)
+    }, [])
 
     return (
         <div id="leaderboard">
@@ -57,8 +79,8 @@ export const Leaderboard = () => {
                             justifyContent: "space-between",
                             margin: "0.5rem 0"
                         }}>
-                            <span style={{ color: `${targetPerson === p.name ? "orange" : "#dedede"}` }}>{i + 1} - {p.name}</span>
-                            <span style={{ color: `${targetPerson === p.name ? "orange" : "#dedede"}` }}>{p.energySaved}% saved</span>
+                            <span style={{ color: `${"You" === p.name ? "orange" : "#dedede"}` }}>{i + 1} - {p.name}</span>
+                            <span style={{ color: `${"You" === p.name ? "orange" : "#dedede"}` }}>{p.energySaved}% saved</span>
                         </div>)
                     }
                 </ul>
@@ -66,6 +88,17 @@ export const Leaderboard = () => {
 
             <CouldDoBetter />
 
+            <ToastContainer
+                theme="dark"
+                position="top-center"
+                autoClose={1000}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss={false}
+                draggable
+                pauseOnHover
+            />
         </div>
     )
 }
