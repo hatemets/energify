@@ -62,16 +62,16 @@ export const CouldDoBetter = () => {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => {
         setOpen(true);
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 22; i++) {
             const timeout = setTimeout(() => {
-                let newProgress = 10 * i + Math.random() * 10 + 10;
+                let newProgress = 5*i + Math.random()*5;
                 if (newProgress > 100) {
                     newProgress = 100;
                     setCount(0);
                     timeouts.current.push(timeout);
                 }
                 setProgress(newProgress)
-            }, 500 * i)
+            }, 250*i + Math.random()*250)
             timeouts.current.push(timeout)
         }
     };
