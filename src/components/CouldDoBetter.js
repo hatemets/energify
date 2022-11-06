@@ -71,7 +71,7 @@ export const CouldDoBetter = () => {
                     timeouts.current.push(timeout);
                 }
                 setProgress(newProgress)
-            }, 250*i + Math.random()*250)
+            }, 500*i + Math.random()*500)
             timeouts.current.push(timeout)
         }
     };
