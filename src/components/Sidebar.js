@@ -7,7 +7,7 @@ export const SideBar = ({ isOpen, setOpen }) => {
         <>
             { isOpen && 
             <div id="sidebar" style={{
-                width: 375,
+                maxWidth: 375,
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
@@ -22,5 +22,5 @@ export const SideBar = ({ isOpen, setOpen }) => {
             </div>
             }
         </>
-    )
+    )   
 }
