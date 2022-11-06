@@ -66,7 +66,7 @@ export const Dashboard = () => {
                 </div>
                 <div style={{ ...boxStyle, float: "right", marginRight: 14, }}>
                     <p style={{ color: LightGrey, fontSize: "2.4rem", margin: 0, padding: 0, }}>$117</p>
-                    <p style={{ color: LightGrey, fontSize: "0.8rem", margin: 0, padding: 0, position: "absolute", bottom: 15 }}>$ saved since <b>October</b></p>
+                    <p style={{ color: LightGrey, fontSize: "0.8rem", margin: 0, padding: 0, position: "absolute", bottom: 15 }}>saved since <b>October</b></p>
                 </div>
             </div>
 
