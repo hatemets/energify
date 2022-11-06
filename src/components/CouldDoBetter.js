@@ -13,8 +13,8 @@ import CircularProgress from '@mui/material/CircularProgress';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 const boxStyle = {
-    width: 180,
-    height: 180,
+    width: 175,
+    height: 175,
     borderRadius: 7,
     display: "flex",
     justifyContent: "center",
@@ -162,7 +162,7 @@ export const CouldDoBetter = () => {
                 <Grow in={open}>
                     <Box sx={{
                         width: 300,
-                        height: 400,
+                        // height: 400,
                         bgcolor: GreenRegular,
                         border: '0px solid #000',
                         boxShadow: 24,
@@ -177,7 +177,7 @@ export const CouldDoBetter = () => {
                             OPTIMIZING
                         </Typography>
                         <CircularProgressWithLabel value={progress} />
-                        <div style={{marginTop: 45, marginBottom: -70, height: 227}}>
+                        <div style={{marginTop: 45, marginBottom: -220, height: 227, maxHeight: 227}}>
                             {progress >= 0 && <div className="line-up">Turned off bathroom ventilation</div>}
                             {progress >= 25 && <div className="line-up">Turned off the oven</div>}
                             {progress >= 50 && <div className="line-up">Turned off a desk lamp</div>}
