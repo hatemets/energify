@@ -11,17 +11,13 @@ const App = () => {
     return (
         <div id="App">
             <Router>
-                {/* <ScrollWrapper> */}
-                    <TopBar />
-                    <Routes>
-                        <Route path="/" element={<Dashboard />} />
-                        <Route path="/logistics" element={<Logistics />} />
-                        <Route path="/leaderboard" element={<Leaderboard />} />
-                        <Route path="/devices" element={<Devices />} />
-                        {/* <Route path="*" element={<NotFound />} /> */}
-                    </Routes>
-                    {/* <Footer /> */}
-                {/* </ScrollWrapper> */}
+                <TopBar />
+                <Routes>
+                    <Route path="/" element={<Dashboard />} />
+                    <Route path="/logistics" element={<Logistics />} />
+                    <Route path="/leaderboard" element={<Leaderboard />} />
+                    <Route path="/devices" element={<Devices />} />
+                </Routes>
             </Router>
         </div>
     )

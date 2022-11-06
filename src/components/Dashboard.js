@@ -44,7 +44,6 @@ const boxStyle3 = {
 }
 
 export const Dashboard = () => {
-
     return (
         <div style={{position: "absolute", top: 89.3}}>
             <div className="heading" style={{height: "auto", width: "100vw", textAlign: "center", marginBottom: 20,}}>
