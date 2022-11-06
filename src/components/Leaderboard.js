@@ -8,12 +8,12 @@ export const Leaderboard = () => {
     const [people, setPeople] = useState([
         { name: "Abdi", energySaved: 78 },
         { name: "Nil", energySaved: 72 },
-        { name: "Mark", energySaved: 69 },
+        { name: "You", energySaved: 69 },
         { name: "Tuukka", energySaved: 68 },
         { name: "Jason", energySaved: 63 }
     ])
 
-    const targetPerson = "Jason"
+    const targetPerson = "You"
 
     return (
         <div id="leaderboard">
