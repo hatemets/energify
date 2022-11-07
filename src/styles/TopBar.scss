@@ -5,16 +5,28 @@
     position: fixed;
     height: 70px;
     overflow: hidden;
+    width: 100% !important;
+    max-width: 375px !important;
     top: 0;
+    margin: 0 !important;
+    padding: 0;
     background-color: $darker;
-    width: 100%;
-    max-width: 500px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     z-index: 2;
 
+    #bell-icon {
+        transform: scale(2);
+    }
+
+    #menu-icon {
+        display: initial;
+        cursor: pointer;
+        z-index: 1;
+    }
+
     #logo-link {
-        margin-left: 4vw;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -25,36 +37,4 @@
         }
     }
 
-    .links {
-        display: flex;
-        align-items: center;
-        a {
-            padding: 3rem 1.5rem;
-            font-size: $medium;
-            margin: 0 1vw;
-        }
-    }
 }
-
-#nav {
-    align-items: center;
-    padding: 0 0.5rem;
-
-    .links {
-        display: none;
-    }
-
-    #bell-icon {
-        transform: scale(2);
-        margin-right: 2.5rem;
-    }
-
-    #menu-icon {
-        display: initial;
-        margin-right: 5vw;
-        margin-left: 1rem;
-        cursor: pointer;
-        z-index: 1;
-    }
-}
-

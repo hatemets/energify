@@ -73,16 +73,14 @@ export const TopBar = () => {
 
     return (
         <>
-            <nav id="nav" style={{
-                maxWidth: 375
-            }}>
-                <span id="menu-icon">
+            <nav id="nav">
+                <span className="item" id="menu-icon">
                     <Hamburger rounded size={40} color={LightGrey} toggled={isOpen} toggle={setOpen} />
                 </span>
 
-                <p style={{ fontSize: 24, fontWeight: "bold" }}>{title}</p>
+                <p className="item" style={{ fontSize: 24, fontWeight: "bold" }}>{title}</p>
 
-                <Link onClick={handleBellClick} id="logo-link">
+                <Link className="item" onClick={handleBellClick} id="logo-link">
                     <FontAwesomeIcon id="bell-icon" color={LightGrey} icon={faBell} />
                 </Link>
             </nav>
